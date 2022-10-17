@@ -1,4 +1,4 @@
-## The code below is for a python program that takes the birth date of a user via user input and returns their current age.
+## The code below is for a python function that takes the birth date of a user via user input and returns their current age.
 
 ```
 #!/usr/bin/env python3
