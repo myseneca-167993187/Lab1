@@ -6,11 +6,24 @@
 from datetime import date
 
 def age(birthday):
-    present = date.today()
-    age = present.year - birthday.year - ((present.month, present.day) < (birthday.month, birthday.day))
-    return age
+from datetime import datetime, date
 
-print(age(date(2001, 10, 15)))
+print("Your date of birth (dd mm yyyy)")
+date_of_birth = datetime.strptime(input("--->"), "%d %m %Y")
+
+try:
+    def calculate_age(born):
+        today = date.today()
+        return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+    age = calculate_age(date_of_birth)
+
+    print(age)
+
+except TypeError:
+    print('Please enter an int')
+
+
 
 World():
 	print(‘Hello World’)
